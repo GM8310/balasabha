@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>മിന്നാമിന്നി ബാലസഭ · Minnaminni Balasabha, Kalyassery</title>
+<meta name="description" content="Minnaminni Balasabha, Kalyassery, K Kannapuram – a children's club. Members, 2026 activities and photos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leaf:#1f5a34;
+    --leaf-dark:#143b23;
+    --glow:#ffd84a;
+    --sky:#e6f5fb;
+    --berry:#b3195c;
+    --ink:#1b2a21;
+    --paper:#ffffff;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Anek Malayalam",system-ui,sans-serif;color:var(--ink);background:var(--sky);line-height:1.65;font-size:1.05rem}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--berry);outline-offset:3px}
 
+  /* top bar */
+  nav{position:sticky;top:0;z-index:20;background:var(--leaf-dark);color:#fff;display:flex;gap:1.2rem;align-items:center;padding:.6rem 1.2rem;overflow-x:auto;white-space:nowrap}
+  nav strong{color:var(--glow);margin-right:auto;font-weight:800}
+  nav a{text-decoration:none;font-size:.95rem;opacity:.9}
+  nav a:hover{opacity:1;text-decoration:underline}
+
+  /* hero */
+  .hero{position:relative;background:var(--leaf-dark);color:#fff;overflow:hidden}
+  .hero img{width:100%;height:min(62vh,520px);object-fit:cover;opacity:.55}
+  .hero-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(1.2rem,5vw,4rem);background:linear-gradient(to top,rgba(10,35,20,.92),rgba(10,35,20,.1) 70%)}
+  .hero h1{margin:0;font-size:clamp(2.4rem,9vw,5.6rem);line-height:1.05;font-weight:800;color:var(--glow);text-shadow:0 0 28px rgba(255,216,74,.55)}
+  .hero p{margin:.5rem 0 0;font-size:clamp(1.05rem,2.6vw,1.5rem);max-width:34ch}
+  .hero small{display:block;margin-top:.6rem;opacity:.85}
+  .fly{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--glow);box-shadow:0 0 14px 6px rgba(255,216,74,.7);animation:float 9s ease-in-out infinite,blink 3s ease-in-out infinite;pointer-events:none}
+  @keyframes float{0%,100%{transform:translate(0,0)}33%{transform:translate(24px,-30px)}66%{transform:translate(-18px,-12px)}}
+  @keyframes blink{0%,100%{opacity:.15}50%{opacity:1}}
+
+  section{padding:clamp(2.5rem,7vw,5rem) clamp(1.1rem,5vw,4rem);max-width:1100px;margin:0 auto}
+  h2{font-size:clamp(1.7rem,4.5vw,2.6rem);margin:0 0 1rem;color:var(--leaf);font-weight:800;line-height:1.2}
+  .lead{font-size:1.25rem;max-width:46ch}
+  .motto{color:var(--berry);font-weight:600}
+
+  /* members */
+  .officers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.4rem}
+  .officer{background:var(--leaf);color:#fff;border-radius:var(--radius);padding:1.2rem 1.4rem}
+  .officer span{display:block;font-size:.95rem;color:var(--glow)}
+  .officer b{font-size:1.5rem;font-weight:800}
+  .members{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;list-style:none;margin:0}
+  .members li{background:var(--paper);border:2px solid var(--leaf);border-radius:999px;padding:.35rem 1.1rem;font-weight:600}
+
+  /* activities: a real month-by-month sequence */
+  .timeline{border-left:4px solid var(--leaf);margin:0 0 0 .6rem;padding:0 0 0 1.6rem;list-style:none}
+  .timeline li{position:relative;margin-bottom:2.2rem}
+  .timeline li::before{content:"";position:absolute;left:-2.2rem;top:.45rem;width:16px;height:16px;border-radius:50%;background:var(--glow);border:4px solid var(--leaf)}
+  .month{font-weight:800;color:var(--berry);font-size:1.1rem}
+  .title{font-size:1.35rem;font-weight:600;margin:0}
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,260px));gap:.8rem;margin-top:.9rem}
+  .photos img{aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);width:100%}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .gallery figure{margin:0;background:var(--paper);border-radius:var(--radius);overflow:hidden}
+  .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .gallery figure.wide{grid-column:1/-1}
+  .gallery figure.wide img{aspect-ratio:16/7}
+  figcaption{padding:.6rem 1rem;font-size:.95rem}
+
+  .poster{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:2rem;align-items:center}
+  .poster img{border-radius:var(--radius);box-shadow:0 8px 28px rgba(20,59,35,.25)}
+  @media(max-width:720px){.poster{grid-template-columns:1fr}}
+
+  footer{background:var(--leaf-dark);color:#fff;text-align:center;padding:2rem 1rem}
+  footer b{color:var(--glow)}
+  @media (prefers-reduced-motion:reduce){.fly{animation:none;opacity:.8}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <strong>മിന്നാമിന്നി ബാലസഭ</strong>
+  <a href="#about">About</a>
+  <a href="#members">Members</a>
+  <a href="#activities">2026 Activities</a>
+  <a href="#gallery">Gallery</a>
+</nav>
+
+<header class="hero">
+  <img src="images/gathering.jpg" alt="Balasabha members and elders gathered on the house steps">
+  <span class="fly" style="left:12%;top:22%"></span>
+  <span class="fly" style="left:34%;top:12%;animation-delay:-2s"></span>
+  <span class="fly" style="left:58%;top:30%;animation-delay:-4s"></span>
+  <span class="fly" style="left:78%;top:16%;animation-delay:-1s"></span>
+  <span class="fly" style="left:90%;top:38%;animation-delay:-5s"></span>
+  <div class="hero-text">
+    <h1>മിന്നാമിന്നി ബാലസഭ</h1>
+    <p>കുട്ടികളുടെ കൂട്ടായ്മ... നാളെയുടെ പ്രതീക്ഷ...</p>
+    <small>Minnaminni Balasabha · കല്യാശ്ശേരി, കെ കണ്ണപുരം</small>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <h2>ഞങ്ങളെക്കുറിച്ച്</h2>
+    <p class="lead">കല്യാശ്ശേരിയിലെ കുട്ടികൾ ഒരുമിച്ച് പഠിക്കാനും കളിക്കാനും പ്രകൃതിയെ അറിയാനുമുള്ള കൂട്ടായ്മയാണ് മിന്നാമിന്നി ബാലസഭ.</p>
+    <p class="motto">ബാലസഭയുടെ ലക്ഷ്യം – ബാലികളുടെ സമഗ്രവികസനം</p>
+    <p>Minnaminni Balasabha is a children's club from Kalyassery, K Kannapuram. Every month the members take up a new activity together.</p>
+  </section>
+
+  <section id="members">
+    <h2>അംഗങ്ങൾ</h2>
+    <div class="officers">
+      <div class="officer"><span>പ്രസിഡണ്ട്</span><b>ഗൗതം. എം</b></div>
+      <div class="officer"><span>സെക്രട്ടറി</span><b>അമൽദീപ് ഇടി</b></div>
+    </div>
+    <ul class="members">
+      <li>കാവേരി</li>
+      <li>ഷാമസ് ടി.കെ</li>
+      <li>ആദിദേവ് എം</li>
+      <li>ആദികൃഷ്ണ എൻ.എം</li>
+      <li>ശിവദ. എൽ എം</li>
+      <li>ശ്രീഹരി</li>
+      <li>സായന്ത്</li>
+      <li>ശ്രീ നന്ദു</li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>2026 പ്രവർത്തന റിപ്പോർട്ട്</h2>
+    <ol class="timeline">
+      <li>
+        <div class="month">ജൂൺ</div>
+        <p class="title">പ്രാദേശിക വൃക്ഷങ്ങളുടെ മാപ്പിംഗ്</p>
+        <p>Mapping the local trees – the members measured the trunks of trees around the neighbourhood.</p>
+        <div class="photos">
+          <img src="images/tree-mapping-1.jpg" alt="Children measuring the trunk of a jackfruit tree with a tape" loading="lazy">
+          <img src="images/tree-mapping-2.jpg" alt="Children measuring a large tree trunk with a tape" loading="lazy">
+        </div>
+      </li>
+      <li>
+        <div class="month">ജൂലൈ</div>
+        <p class="title">ബാലസഭ ഫാം ക്ലബ്</p>
+      </li>
+      <li>
+        <div class="month">ഓഗസ്റ്റ്</div>
+        <p class="title">നോ വെഹിക്കിൾ ഡേ ചലഞ്ച്</p>
+        <p>No Vehicle Day challenge – cycles instead of motor vehicles.</p>
+        <div class="photos">
+          <img src="images/cycles.jpg" alt="Three members with their bicycles" loading="lazy">
+        </div>
+      </li>
+      <li>
+        <div class="month">സെപ്റ്റംബർ</div>
+        <p class="title">റീൽസ് തയ്യാറാക്കൽ</p>
+      </li>
+      <li>
+        <div class="month">ഒക്ടോബർ</div>
+        <p class="title">ഭക്ഷ്യമേള</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="gallery">
+    <h2>ചിത്രങ്ങൾ</h2>
+    <div class="gallery">
+      <figure class="wide"><img src="images/gathering.jpg" alt="Members gathered on the steps" loading="lazy"><figcaption>ബാലസഭ കൂടിച്ചേരൽ</figcaption></figure>
+      <figure><img src="images/tree-mapping-1.jpg" alt="Tree mapping" loading="lazy"><figcaption>വൃക്ഷങ്ങളുടെ മാപ്പിംഗ്</figcaption></figure>
+      <figure><img src="images/tree-mapping-2.jpg" alt="Tree mapping" loading="lazy"><figcaption>വൃക്ഷങ്ങളുടെ മാപ്പിംഗ്</figcaption></figure>
+      <figure><img src="images/cycles.jpg" alt="Bicycles" loading="lazy"><figcaption>നോ വെഹിക്കിൾ ഡേ</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="poster" class="poster">
+    <img src="images/poster.jpg" alt="Minnaminni Balasabha 2026 activity report poster" loading="lazy">
+    <div>
+      <h2>ബാലസഭ പോസ്റ്റർ</h2>
+      <p>2026-ലെ പ്രവർത്തനങ്ങളുടെ റിപ്പോർട്ട് പോസ്റ്റർ.</p>
+      <p><a href="images/poster.jpg" target="_blank" rel="noopener">Open the full poster</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <b>മിന്നാമിന്നി ബാലസഭ</b><br>
+  കല്യാശ്ശേരി, കെ കണ്ണപുരം · 2026
+</footer>
+
+</body>
+</html>
